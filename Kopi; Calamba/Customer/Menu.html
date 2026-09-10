@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi; Calamba Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Poppins:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="Menu.css">
+  <link rel="icon" href="HomePic/Logo.png"/>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="Homepage.html">
+        <img src="HomePic/Logo.png" alt="Kopi logo">
+      </a>
+
+      <a class="location" href="https://www.google.com/maps/place/Kopi;+Calamba+Main/@14.2151839,121.1813173,273m/data=!3m1!1e3!4m15!1m8!3m7!1s0x33bd61f7b1cf1317:0x6944391c174ae7b5!2sKopi;+Calamba+Main!8m2!3d14.2151266!4d121.1814945!10e9!16s%2Fg%2F11ny11vdb_!3m5!1s0x33bd61f7b1cf1317:0x6944391c174ae7b5!8m2!3d14.2151266!4d121.1814945!16s%2Fg%2F11ny11vdb_!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+        <span>Lingga, Calamba City</span>
+      </a>
+
+      <label class="search" aria-label="Search">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <input id="menuSearch" type="search" placeholder="Search for coffee and more">
+      </label>
+
+      <div class="nav-links">
+        <a class="nav-link" href="Homepage.html">
+          <i class="bi bi-house-door-fill" aria-hidden="true"></i>
+          <span>Home</span>
+        </a>
+        <a class="nav-link active" href="Menu.html">
+          <i class="bi bi-cup-hot" aria-hidden="true"></i>
+          <span>Menu</span>
+        </a>
+        <a class="nav-link" href="Cart.html">
+          <i class="bi bi-cart-fill" aria-hidden="true"></i>
+          <span class="cart-count" data-cart-count>0</span>
+          <span>Cart</span>
+        </a>
+        <a class="nav-link" href="Account.html">
+          <i class="bi bi-person-fill" aria-hidden="true"></i>
+          <span>Account</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="menu-page">
+    <div class="menu-tabs" id="menuTabs" aria-label="Menu categories">
+      <button class="tab-btn active" type="button" data-target="kopi">
+        Kopi;
+      </button>
+      <button class="tab-btn " type="button" data-target="non-kopi">
+        Non-Kopi;
+      </button>
+      <button class="tab-btn " type="button" data-target="fruit-soda-tea-series">
+        Fruit Soda and Tea Series
+      </button>
+      <button class="tab-btn " type="button" data-target="cream-based">
+        Frappe
+      </button>
+      <button class="tab-btn " type="button" data-target="coffee-based">
+        Coffee Based
+      </button>
+      <button class="tab-btn " type="button" data-target="rice-meals">
+        Rice Meals
+      </button>
+      <button class="tab-btn " type="button" data-target="chicken-meals">
+        Chicken Meals
+      </button>
+      <button class="tab-btn " type="button" data-target="snacks">
+        Snacks
+      </button>
+    </div>
+    <section id="menuSections" class="menu-sections" aria-live="polite">
+      <section class="menu-category" id="kopi">
+        <h2>Kopi;</h2>
+        <div class="product-slider">
+          <div class="product-row" id="product-row-1">
+
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="americano"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Bold black coffee with a smooth espresso finish."
+              data-prices='{&quot;12oz&quot;:100,&quot;16oz&quot;:110}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi1.png" alt="Americano">
+              <h3>Americano</h3>
+              <p>PHP 100 - PHP 110</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="caramel-macchiato"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="A smooth blend of vanilla syrup and steamed milk, topped with rich espresso and caramel drizzle."
+              data-prices='{&quot;12oz&quot;:110,&quot;16oz&quot;:120}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi2.png" alt="Caramel Macchiato">
+              <h3>Caramel Macchiato</h3>
+              <p>PHP 110 - PHP 120</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="spanish-latte"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Creamy espresso latte sweetened with a balanced Spanish-style finish."
+              data-prices='{&quot;12oz&quot;:110,&quot;16oz&quot;:120}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi3.png" alt="Spanish Latte">
+              <h3>Spanish Latte</h3>
+              <p>PHP 110 - PHP 120</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="dirty-matcha"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Earthy matcha layered with espresso and milk."
+              data-prices='{&quot;12oz&quot;:120,&quot;16oz&quot;:120}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi4.png" alt="Dirty Matcha">
+              <h3>Dirty Matcha</h3>
+              <p>PHP 120</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="dark-mocha"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Dark chocolate and espresso with a creamy coffee base."
+              data-prices='{&quot;12oz&quot;:110,&quot;16oz&quot;:120}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi5.png" alt="Dark Mocha">
+              <h3>Dark Mocha</h3>
+              <p>PHP 110 - PHP 120</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="white-choco-mocha"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="A creamy blend of white chocolate and espresso with smooth steamed milk."
+              data-prices='{&quot;12oz&quot;:110,&quot;16oz&quot;:120}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi6.png" alt="White Choco Mocha">
+              <h3>White Choco Mocha</h3>
+              <p>PHP 110 - PHP 120</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="cafe-latte"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Rich espresso combined with velvety steamed milk for a smooth, classic taste."
+              data-prices='{&quot;12oz&quot;:100,&quot;16oz&quot;:110}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi7.png" alt="Cafe Latte">
+              <h3>Cafe Latte</h3>
+              <p>PHP 100 - PHP 110</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="nutella-latte"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Nutella with smooth espresso and milk."
+              data-prices='{&quot;12oz&quot;:110,&quot;16oz&quot;:120}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi8.png" alt="Nutella Latte">
+              <h3>Nutella Latte</h3>
+              <p>PHP 110 - PHP 120</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="salted-caramel"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Caramel latte with a gentle salted finish."
+              data-prices='{&quot;12oz&quot;:120,&quot;16oz&quot;:130}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi9.png" alt="Salted Caramel">
+              <h3>Salted Caramel</h3>
+              <p>PHP 120 - PHP 130</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="sea-salt-latte"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Smooth espresso and creamy milk topped with a light, savory sea salt cream."
+              data-prices='{&quot;12oz&quot;:120,&quot;16oz&quot;:130}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi10.png" alt="Sea Salt Latte">
+              <h3>Sea Salt Latte</h3>
+              <p>PHP 120 - PHP 130</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="kopi-special"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Our signature house blend featuring rich espresso, creamy milk, and a uniquely satisfying flavor."
+              data-prices='{&quot;12oz&quot;:95,&quot;16oz&quot;:105}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Kopi11.png" alt="Kopi; Special">
+              <h3>Kopi; Special</h3>
+              <p>PHP 95 - PHP 105</p>
+            </button>
+          </div>
+          <div class="slider-buttons" id="slider-buttons-1">
+            <button class="slider-button" type="button" onclick="prevProduct1()" aria-label="Previous Kopi; items">&#10094;</button>
+            <button class="slider-button" type="button" onclick="nextProduct1()" aria-label="Next Kopi; items">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-category" id="non-kopi">
+        <h2>Non-Kopi;</h2>
+        <div class="product-slider">
+          <div class="product-row" id="product-row-2">
+
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="milky-chocolate"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Rich chocolate blended with creamy milk for a smooth, indulgent treat."
+              data-prices='{&quot;12oz&quot;:100,&quot;16oz&quot;:110}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/NonKopi1.png" alt="Milky Chocolate">
+              <h3>Milky Chocolate</h3>
+              <p>PHP 100 - PHP 110</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="matcha-latte"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Smooth matcha and milk with a clean green tea finish."
+              data-prices='{&quot;12oz&quot;:110,&quot;16oz&quot;:120}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/NonKopi2.png" alt="Matcha Latte">
+              <h3>Matcha Latte</h3>
+              <p>PHP 110 - PHP 120</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="strawberry-oreo"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Sweet strawberry and crunchy Oreo blended into a creamy, refreshing drink."
+              data-prices='{&quot;12oz&quot;:110,&quot;16oz&quot;:120}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/NonKopi3.png" alt="Strawberry Oreo">
+              <h3>Strawberry Oreo</h3>
+              <p>PHP 110 - PHP 120</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="sea-salt-matcha"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="A creamy milk-based drink topped with a smooth, lightly salted cream and matcha."
+              data-prices='{&quot;12oz&quot;:115,&quot;16oz&quot;:125}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/NonKopi4.png" alt="Sea Salt Matcha">
+              <h3>Sea Salt Matcha</h3>
+              <p>PHP 115 - PHP 125</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="chocolate-matcha"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="A delightful blend of rich chocolate and smooth matcha."
+              data-prices='{&quot;12oz&quot;:110,&quot;16oz&quot;:120}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/NonKopi5.png" alt="Chocolate Matcha">
+              <h3>Chocolate Matcha</h3>
+              <p>PHP 110 - PHP 120</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="milky-oreo"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Creamy milk blended with crushed Oreo cookies for a rich and satisfying flavor."
+              data-prices='{&quot;12oz&quot;:105,&quot;16oz&quot;:115}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/NonKopi6.png" alt="Milky Oreo">
+              <h3>Milky Oreo</h3>
+              <p>PHP 105 - PHP 115</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="milky-strawberry"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Fresh strawberry flavor blended with creamy milk for a sweet, refreshing taste."
+              data-prices='{&quot;12oz&quot;:100,&quot;16oz&quot;:110}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/NonKopi7.png" alt="Milky Strawberry">
+              <h3>Milky Strawberry</h3>
+              <p>PHP 100 - PHP 110</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-category" id="fruit-soda-tea-series">
+        <h2>Fruit Soda and Tea Series</h2>
+        <div class="product-slider">
+          <div class="product-row" id="product-row-3">
+
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="hibiscus-tea-with-strawberry"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="A refreshing blend of floral hibiscus tea, sweet strawberry, and popping bobba for a fruity burst in every sip."
+              data-prices='{&quot;12oz&quot;:90,&quot;16oz&quot;:100}'
+              data-options='[{&quot;key&quot;:&quot;temperature&quot;,&quot;label&quot;:&quot;Temperature&quot;,&quot;values&quot;:[&quot;Hot&quot;,&quot;Iced&quot;],&quot;defaultValue&quot;:&quot;Iced&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;12oz&quot;,&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;12oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Less Ice&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/Hibiscus_tea.png" alt="Hibiscus Tea with Strawberry popping bobba">
+              <h3>Hibiscus Tea with Strawberry popping bobba</h3>
+              <p>PHP 90 - PHP 100</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="green-apple"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Crisp green apple flavor with sparkling soda for a refreshing fizz."
+              data-prices='{&quot;16oz&quot;:110}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Normal Ice&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/FruitSoda1.png" alt="Green Apple">
+              <h3>Green Apple</h3>
+              <p>PHP 110</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="blueberry"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Sweet blueberry blended with sparkling soda for a fruity, bubbly refreshment."
+              data-prices='{&quot;16oz&quot;:110}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Normal Ice&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/FruitSoda2.png" alt="Blueberry">
+              <h3>Blueberry</h3>
+              <p>PHP 110</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="lychee"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Delicate lychee flavor mixed with sparkling soda for a light and refreshing drink."
+              data-prices='{&quot;16oz&quot;:110}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Normal Ice&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/FruitSoda3.png" alt="Lychee">
+              <h3>Lychee</h3>
+              <p>PHP 110</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="strawberry"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Sweet strawberry flavor combined with sparkling soda for a fruity, fizzy delight."
+              data-prices='{&quot;16oz&quot;:110}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;ice&quot;,&quot;label&quot;:&quot;Ice Level&quot;,&quot;values&quot;:[&quot;Normal Ice&quot;,&quot;Less Ice&quot;],&quot;defaultValue&quot;:&quot;Normal Ice&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/FruitSoda4.png" alt="Strawberry">
+              <h3>Strawberry</h3>
+              <p>PHP 110</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-category" id="cream-based">
+        <h2>Cream Based</h2>
+        <div class="product-slider">
+          <div class="product-row" id="product-row-4">
+
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="nutty-choco"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="A creamy blend of rich chocolate and nutty flavors, perfectly blended with ice."
+              data-prices='{&quot;16oz&quot;:140}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CreamB1.png" alt="Nutty Choco">
+              <h3>Nutty Choco</h3>
+              <p>PHP 140</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="triple-white-chocolate"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Smooth white chocolate blended into a rich, creamy frappe."
+              data-prices='{&quot;16oz&quot;:150}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CreamB2.png" alt="Triple White Chocolate">
+              <h3>Triple White Chocolate</h3>
+              <p>PHP 150</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="matcha-cream"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Premium matcha blended with creamy milk for a smooth and refreshing treat."
+              data-prices='{&quot;16oz&quot;:140}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CreamB3.png" alt="Matcha Cream">
+              <h3>Matcha Cream</h3>
+              <p>PHP 140</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="triple-chocolate"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="A rich blend of chocolatey flavor, perfectly creamy and indulgent."
+              data-prices='{&quot;16oz&quot;:150}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CreamB4.png" alt="Triple Chocolate">
+              <h3>Triple Chocolate</h3>
+              <p>PHP 150</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="cookies-n-cream"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Creamy vanilla blended with crushed cookies for a classic favorite."
+              data-prices='{&quot;16oz&quot;:140}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CreamB5.png" alt="Cookies n&#39; Cream">
+              <h3>Cookies n&#39; Cream</h3>
+              <p>PHP 140</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="strawberry-n-cream"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Sweet strawberry blended with creamy milk for a refreshing frappe."
+              data-prices='{&quot;16oz&quot;:150}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CreamB6.png" alt="Strawberry n&#39; Cream">
+              <h3>Strawberry n&#39; Cream</h3>
+              <p>PHP 150</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="biscoff-n-cream"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Creamy milk blended with caramelized Biscoff cookies for a rich, spiced flavor."
+              data-prices='{&quot;16oz&quot;:150}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CreamB7.png" alt="Biscoff n&#39; Cream">
+              <h3>Biscoff n&#39; Cream</h3>
+              <p>PHP 150</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-category" id="coffee-based">
+        <h2>Coffee Based</h2>
+        <div class="product-slider">
+          <div class="product-row" id="product-row-5">
+
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="triple-mocha"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="A rich blend of espresso and three layers of chocolate, perfectly blended with ice."
+              data-prices='{&quot;16oz&quot;:160}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CoffeeB1.png" alt="Triple Mocha">
+              <h3>Triple Mocha</h3>
+              <p>PHP 160</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="mocha-frappe"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Bold espresso and rich chocolate blended into a smooth, icy treat."
+              data-prices='{&quot;16oz&quot;:160}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CoffeeB2.png" alt="Mocha Frappe">
+              <h3>Mocha Frappe</h3>
+              <p>PHP 160</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="caramel-frappe"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Smooth espresso blended with sweet caramel and creamy milk."
+              data-prices='{&quot;16oz&quot;:160}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CoffeeB3.png" alt="Caramel Frappe">
+              <h3>Caramel Frappe</h3>
+              <p>PHP 160</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="dark-mochaccino"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Bold espresso and dark chocolate blended for a rich, intense flavor."
+              data-prices='{&quot;16oz&quot;:160}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CoffeeB4.png" alt="Dark Mochaccino">
+              <h3>Dark Mochaccino</h3>
+              <p>PHP 160</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="white-mocha-frappe"
+              data-product-type="drink"
+              data-customizable="true"
+              data-description="Espresso blended with creamy white chocolate for a smooth and indulgent finish."
+              data-prices='{&quot;16oz&quot;:160}'
+              data-options='[{&quot;key&quot;:&quot;size&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;values&quot;:[&quot;16oz&quot;],&quot;defaultValue&quot;:&quot;16oz&quot;,&quot;priceKey&quot;:true},{&quot;key&quot;:&quot;sugar&quot;,&quot;label&quot;:&quot;Sugar Level&quot;,&quot;values&quot;:[&quot;Normal Sugar&quot;,&quot;Less Sugar&quot;],&quot;defaultValue&quot;:&quot;Normal Sugar&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/CoffeeB5.png" alt="White Mocha Frappe">
+              <h3>White Mocha Frappe</h3>
+              <p>PHP 160</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-category" id="rice-meals">
+        <h2>Rice Meals</h2>
+        <div class="product-slider">
+          <div class="product-row" id="product-row-6">
+
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="bangus"
+              data-product-type="food"
+              data-customizable="true"
+              data-description="Bangus, garlic rice, and egg."
+              data-prices='{&quot;Regular&quot;:189}'
+              data-options='[]'
+            >
+              <img src="menu/RiceM1.png" alt="Bangus">
+              <h3>Bangus</h3>
+              <p>PHP 189</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="liempo"
+              data-product-type="food"
+              data-customizable="true"
+              data-description="Liempo, garlic rice, and egg."
+              data-prices='{&quot;Regular&quot;:169}'
+              data-options='[]'
+            >
+              <img src="menu/RiceM2.png" alt="Liempo">
+              <h3>Liempo</h3>
+              <p>PHP 169</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="tapa"
+              data-product-type="food"
+              data-customizable="true"
+              data-description="Tapa, garlic rice, and egg."
+              data-prices='{&quot;Regular&quot;:179}'
+              data-options='[]'
+            >
+              <img src="menu/RiceM3.png" alt="Tapa">
+              <h3>Tapa</h3>
+              <p>PHP 179</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="hungarian-sausage"
+              data-product-type="food"
+              data-customizable="true"
+              data-description="Hungarian sausage, garlic rice, and egg."
+              data-prices='{&quot;Regular&quot;:169}'
+              data-options='[]'
+            >
+              <img src="menu/RiceM4.png" alt="Hungarian Sausage">
+              <h3>Hungarian Sausage</h3>
+              <p>PHP 169</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-category" id="chicken-meals">
+        <h2>Chicken Meals</h2>
+        <div class="product-slider">
+          <div class="product-row" id="product-row-7">
+
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="chicken-wings"
+              data-product-type="food"
+              data-customizable="true"
+              data-description="Crispy, juicy chicken wings tossed in your favorite flavorful sauce."
+              data-prices='{&quot;6pcs&quot;:190,&quot;12pcs&quot;:370}'
+              data-options='[{&quot;key&quot;:&quot;flavor&quot;,&quot;label&quot;:&quot;Flavors&quot;,&quot;values&quot;:[&quot;Sweet Chili&quot;,&quot;Spicy&quot;,&quot;Garlic Parmesan&quot;],&quot;defaultValue&quot;:&quot;Sweet Chili&quot;,&quot;priceKey&quot;:false},{&quot;key&quot;:&quot;pieces&quot;,&quot;label&quot;:&quot;Pieces&quot;,&quot;values&quot;:[&quot;6pcs&quot;,&quot;12pcs&quot;],&quot;defaultValue&quot;:&quot;12pcs&quot;,&quot;priceKey&quot;:true}]'
+            >
+              <img src="menu/ChickenM1.png" alt="Chicken Wings">
+              <h3>Chicken Wings</h3>
+              <p>PHP 190 - PHP 370</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="chicken-fingers-with-fries"
+              data-product-type="food"
+              data-customizable="true"
+              data-description="Crispy chicken tenders served with golden, seasoned fries for a satisfying meal."
+              data-prices='{&quot;Regular&quot;:195}'
+              data-options='[{&quot;key&quot;:&quot;flavor&quot;,&quot;label&quot;:&quot;Flavors&quot;,&quot;values&quot;:[&quot;Sweet Chili&quot;,&quot;Spicy&quot;,&quot;Garlic Parmesan&quot;],&quot;defaultValue&quot;:&quot;Sweet Chili&quot;,&quot;priceKey&quot;:false}]'
+            >
+              <img src="menu/ChickenM2.png" alt="Chicken Fingers with Fries">
+              <h3>Chicken Fingers with Fries</h3>
+              <p>PHP 195</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-category" id="snacks">
+        <h2>Snacks</h2>
+        <div class="product-slider">
+          <div class="product-row" id="product-row-8">
+
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="beef-quesadilla"
+              data-product-type="food"
+              data-customizable="true"
+              data-description="Seasoned beef and melted cheese folded in a toasted tortilla."
+              data-prices='{&quot;Regular&quot;:155}'
+              data-options='[]'
+            >
+              <img src="menu/Snack1.png" alt="Beef Quesadilla">
+              <h3>Beef Quesadilla</h3>
+              <p>PHP 155</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="cheese-quesadilla"
+              data-product-type="food"
+              data-customizable="true"
+              data-description="Melted cheese wrapped in a warm, toasted tortilla for a simple classic."
+              data-prices='{&quot;Regular&quot;:145}'
+              data-options='[]'
+            >
+              <img src="menu/Snack2.png" alt="Cheese Quesadilla">
+              <h3>Cheese Quesadilla</h3>
+              <p>PHP 145</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="nachos"
+              data-product-type="food"
+              data-customizable="true"
+              data-description="Crispy nachos topped with rich, creamy cheese sauce."
+              data-prices='{&quot;Regular&quot;:155}'
+              data-options='[]'
+            >
+              <img src="menu/Snack3.png" alt="Nachos">
+              <h3>Nachos</h3>
+              <p>PHP 155</p>
+            </button>
+            <button
+              class="product-card"
+              type="button"
+              data-product-id="cheesy-fries"
+              data-product-type="food"
+              data-customizable="true"
+              data-description="Golden fries topped with creamy cheese sauce."
+              data-prices='{&quot;Regular&quot;:145}'
+              data-options='[]'
+            >
+              <img src="menu/Snack4.png" alt="Cheesy Fries">
+              <h3>Cheesy Fries</h3>
+              <p>PHP 145</p>
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div class="customizer" id="customizer" aria-hidden="true">
+    <div class="customizer-panel" role="dialog" aria-modal="true" aria-labelledby="customizerTitle">
+      <button class="back-btn" type="button" data-close-customizer aria-label="Close customizer">
+        <i class="bi bi-x"></i>
+      </button>
+
+      <div class="customizer-content">
+        <div class="custom-image-shell">
+          <img id="customImage" src="" alt="">
+        </div>
+
+        <form class="custom-details" id="customForm">
+          <h1 id="customizerTitle">Drink name</h1>
+          <p id="customDescription">Customize your order.</p>
+
+          <div class="option-grid" id="customOptions"></div>
+
+          <div class="order-row">
+            <div class="quantity-control" aria-label="Quantity">
+              <button type="button" data-qty="minus" aria-label="Decrease quantity"><i class="bi bi-dash"></i></button>
+              <strong id="quantityValue">1</strong>
+              <button type="button" data-qty="plus" aria-label="Increase quantity"><i class="bi bi-plus"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="customizer-footer">
+        <strong class="custom-price" id="customPrice">PHP 0</strong>
+        <div class="action-row">
+          <button class="btn outline" type="button" id="buyNowBtn">Buy Now</button>
+          <button class="btn solid" type="submit" form="customForm">Add To Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="HomePic/Logo.png" alt="Kopi logo">
+      </div>
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a class="instagram" href="https://www.instagram.com/kopicalamba?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="facebook" href="https://www.facebook.com/kopicalamba" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Operating Hours</h3>
+        <p>Tuesday - Sunday</p>
+        <p>4PM - 11PM</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>09123456789</p>
+        <p>kopi@email.com</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2024 <a href="#">Kopi Calamba.</a> All Rights Reserved.</p>
+  </footer>
+
+  <script src="Store.js"></script>
+  <script src="Menu.js"></script>
+</body>
+</html>
